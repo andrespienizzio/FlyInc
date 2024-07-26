@@ -22,7 +22,7 @@
 }
 @font-face {
   font-family: Cooper-Black;
-  src: url("/assets/COOPBL.ttf");
+  src: url("./COOPBL.ttf");
 }
 
 body {
