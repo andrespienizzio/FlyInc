@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = "dist/option-2"
+
+[context.production]
+  branch = "option-2"
