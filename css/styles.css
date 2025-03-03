@@ -497,6 +497,34 @@ progress {
   font-weight: 300;
   line-height: 1.2;
 }
+
+/* Agregado por mi */
+
+.logo {
+  width: clamp(680px, 102vw, 1190px); /* Redujimos un 15% */
+  height: auto;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: clamp(408px, 51vw, 1020px);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: clamp(272px, 85vw, 680px);
+  }
+}
+
+
+
+
+
+/* --- */
+
+
+
 @media (min-width: 1200px) {
   .display-1 {
     font-size: 5rem;
@@ -11197,6 +11225,7 @@ header.masthead .masthead-heading {
     text-align: left;
   }
 }
+
 @media (min-width: 992px) {
   .timeline > li {
     min-height: 150px;
