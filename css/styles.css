@@ -10934,12 +10934,53 @@ p {
   padding: 0;
   border-radius: 100%;
 }
-
+/* General styles for #mainNav */
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #212529;
+  transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* Inicialmente oculta */
+  transform: translateY(-100%); /* Desplazada hacia arriba */
 }
+
+#mainNav.navbar-shrink {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #212529;
+  opacity: 1; /* Hacemos visible la barra */
+  transform: translateY(0); /* Vuelve a su posición normal */
+}
+
+/* Estilos de la marca */
+#mainNav .navbar-brand {
+  color: #741931;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  transition: font-size 0.3s ease-in-out;
+}
+
+#mainNav .navbar-brand img {
+  height: 1.5rem;
+  transition: height 0.3s ease-in-out;
+}
+
+/* Estilos de los enlaces de navegación */
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.0625em;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #ad366c;
+}
+
+/* Estilos para el botón de navegación (toggler) */
 #mainNav .navbar-toggler {
   padding: 0.75rem;
   font-size: 0.75rem;
@@ -10947,61 +10988,55 @@ p {
   text-transform: uppercase;
   font-weight: 700;
 }
-#mainNav .navbar-brand {
-  color: #741931;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  letter-spacing: 0.0625em;
-  text-transform: uppercase;
-}
-#mainNav .navbar-brand img {
-  height: 1.5rem;
-}
-#mainNav .navbar-nav .nav-item .nav-link {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.95rem;
-  color: #fff;
-  letter-spacing: 0.0625em;
-}
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ad366c;
-}
 
+/* Para pantallas con un ancho mínimo de 992px (pantallas de escritorio pequeñas y tabletas más grandes) */
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
     background-color: transparent;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* Empieza con la barra oculta */
+    transform: translateY(-100%); /* Empieza desplazada hacia arriba */
   }
-  #mainNav .navbar-brand {
-    font-size: 1.5em;
-    transition: font-size 0.3s ease-in-out;
-  }
-  #mainNav .navbar-brand img {
-    height: 2rem;
-    transition: height 0.3s ease-in-out;
-  }
+
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #212529;
+    opacity: 1; /* La opacidad aumenta al hacer scroll */
+    transform: translateY(0); /* La barra vuelve a su posición original */
   }
+
+  #mainNav .navbar-brand {
+    font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  #mainNav .navbar-brand img {
+    height: 2rem;
+    transition: height 0.3s ease-in-out;
+  }
+
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
+
   #mainNav.navbar-shrink .navbar-brand svg,
   #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
+    height: 2.5rem;
   }
+
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
   }
+
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
   }
 }
+
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;

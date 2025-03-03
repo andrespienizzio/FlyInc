@@ -15,16 +15,21 @@ window.addEventListener('DOMContentLoaded', event => {
         if (!navbarCollapsible) {
             return;
         }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+        if (window.scrollY > 50) {  // Cambia el 50 por el valor que desees
+            navbarCollapsible.classList.add('navbar-shrink');
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink');
         }
-
     };
 
-    // Shrink the navbar 
-    navbarShrink();
+    // Inicialmente oculta la barra de navegación
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbarCollapsible = document.body.querySelector('#mainNav');
+        if (navbarCollapsible) {
+            navbarCollapsible.style.opacity = '0';  // La opacidad empieza en 0
+            navbarCollapsible.style.transform = 'translateY(-100%)'; // La barra está fuera de la vista
+        }
+    });
 
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
