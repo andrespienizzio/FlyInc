@@ -10951,7 +10951,7 @@ p {
 #mainNav.navbar-shrink {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #212529;
+  background-color: #2d2926;
   opacity: 1; /* Hacemos visible la barra */
   transform: translateY(0); /* Vuelve a su posición normal */
 }
@@ -11008,7 +11008,7 @@ p {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #212529;
+    background-color: #2d2926;
     opacity: 1; /* La opacidad aumenta al hacer scroll */
     transform: translateY(0); /* La barra vuelve a su posición original */
   }
@@ -11351,19 +11351,43 @@ header.masthead .masthead-heading {
     padding: 0 100px 20px 20px;
   }
 }
+
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
+  font-size: rem; /* Aumenta el tamaño del texto */
 }
+
 .team-member img {
-  width: 14rem;
-  height: 14rem;
+  width: 20rem; /* Aumenta el tamaño de la imagen */
+  height: 20rem;
   border: 0.5rem solid rgba(0, 0, 0, 0.1);
 }
+
 .team-member h4, .team-member .h4 {
   margin-top: 1.5rem;
   margin-bottom: 0;
+  font-size: 2rem; /* Aumenta el tamaño del nombre */
 }
+
+.team-member p {
+  font-size: 1.4rem; /* Aumenta el tamaño de la descripción */
+}
+
+.btn-social {
+  background-color: #741931 !important; /* Cambia el fondo del botón de LinkedIn */
+  border-radius: 50%; /* Mantiene el estilo circular */
+  width: 3rem; /* Aumenta el tamaño del botón */
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-social i.fab.fa-linkedin-in {
+  font-size: rem; /* Hace el ícono de LinkedIn un 20% más grande */
+  color: #ffffff !important; /* Cambia el color del ícono a blanco */
+}
+
 
 .img-brand {
   height: 2.75rem;
