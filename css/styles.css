@@ -61,7 +61,7 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  --bs-body-color: #57101b;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -167,6 +167,10 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 abbr[title] {
@@ -2849,8 +2853,8 @@ textarea.form-control-lg {
   --bs-btn-bg: #57101b;
   --bs-btn-border-color: #57101b;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #cf5331;
-  --bs-btn-hover-border-color: #c34e2e;
+  --bs-btn-hover-bg: #741931;
+  --bs-btn-hover-border-color: #741931;
   --bs-btn-focus-shadow-rgb: 246, 122, 88;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #c34e2e;
