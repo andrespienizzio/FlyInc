@@ -1,0 +1,15 @@
+[build]
+  publish = "dist"   # Asegúrate de que esta es la carpeta correcta donde se encuentran tus archivos generados.
+  command = "npm run build"  # Cambia esto si el comando de build de tu proyecto es diferente (por ejemplo, 'yarn build', o algo de tu proyecto específico).
+
+[[context.deploy-preview]]
+  branch = "option-1"   # Desplegar la rama option-1 como una previsualización.
+
+[[context.deploy-preview]]
+  branch = "option-2"   # Desplegar la rama option-2 como una previsualización.
+
+[[context.deploy-preview]]
+  branch = "option-3"   # Desplegar la rama option-3 como una previsualización.
+
+[[context.deploy-preview]]
+  branch = "*"  # Esto asegura que cualquier otra rama será desplegada también como previsualización.
