@@ -1,15 +1,11 @@
 [build]
-  publish = "dist"   
+  publish = "options" 
   command = "npm run build" 
 
 [context.deploy-preview]
-  branch = "option-1"  
+  branch = "option-1"
+  
+  branch = "option-2"
+  
+  branch = "option-3"
 
-[context.deploy-preview]
-  branch = "option-2"  
-
-[context.deploy-preview]
-  branch = "option-3"  
-
-[context.deploy-preview]
-  branch = "*"  
