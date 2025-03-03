@@ -421,6 +421,32 @@ legend {
   font-size: calc(1.275rem + 0.3vw);
   line-height: inherit;
 }
+
+/* Aumentando la especificidad del selector para asegurar que se aplique */
+section#contact .instagram-icon {
+  background-color: #57101b; /* Color principal */
+  padding: 10px;
+  border-radius: 50%; /* Curvatura circular */
+  transition: background-color 0.3s;
+  color: white; /* Blanco para el ícono */
+  text-decoration: none; /* Eliminar subrayado */
+  display: inline-flex; /* Para centrar el ícono */
+  align-items: center;
+  justify-content: center;
+  width: 56px; /* Tamaño del ícono */
+  height: 56px; /* Tamaño del ícono */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+section#contact .instagram-icon:hover {
+  background-color: #741931; /* Cambio de color en hover */
+}
+
+section#contact .instagram-icon i {
+  font-size: 24px; /* Ajusta el tamaño del ícono */
+}
+
+
 @media (min-width: 1200px) {
   legend {
     font-size: 1.5rem;
