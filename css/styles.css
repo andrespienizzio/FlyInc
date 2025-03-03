@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 255, 200, 0;
+  --bs-primary-rgb: 116, 25, 49;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -417,6 +417,35 @@ legend {
   font-size: calc(1.275rem + 0.3vw);
   line-height: inherit;
 }
+
+/* Agregado del template original */
+
+#services .text-muted {
+  font-size: 1.75rem; /* Aumentar el tamaño del texto */
+  color: #6c757d; /* Color gris para el texto */
+  line-height: 2.25rem; /* Mayor espacio entre líneas */
+  margin-bottom: 1.5rem; /* Espacio entre párrafos */
+  text-align: justify; /* Justificar el texto */
+}
+
+#services h2 {
+  font-size: 3rem; /* Aumentar el tamaño del título */
+  font-weight: bold;
+  margin-bottom: 3rem; /* Aumenta la separación entre el título y el texto */
+}
+
+#services h3 {
+  font-size: 2rem; /* Aumento del tamaño de la subcabecera */
+  color: #6c757d;
+  margin-bottom: 2rem; /* Espacio entre el subtítulo y el texto */
+}
+
+
+
+/* --- */
+
+
+
 @media (min-width: 1200px) {
   legend {
     font-size: 1.5rem;
