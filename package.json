@@ -1,0 +1,8 @@
+{
+  "name": "flyinc",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Build command not specified' && exit 1"
+  },
+  "dependencies": {}
+}
