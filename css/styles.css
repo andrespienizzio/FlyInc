@@ -11112,37 +11112,51 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra todo en el contenedor */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  flex-direction: column !important; /* Fuerza el diseño vertical */
 }
 
 .masthead .masthead-logo {
-  height: 100px; /* Tamaño inicial del logo */
-  width: auto;
-  opacity: 0.9;
-  margin-bottom: 30px; /* Espacio entre el logo y el botón */
-  transition: height 0.3s ease; /* Suaviza la transición del tamaño */
+  height: 200px !important; /* Tamaño inicial del logo */
+  width: auto !important;
+  opacity: 0.9 !important;
+  margin-bottom: 30px !important; /* Espacio entre el logo y el botón */
+  transition: height 0.3s ease !important;
 }
 
-.masthead h2, .masthead .h2 {
-  max-width: 20rem;
-  font-size: 1rem;
+.masthead .d-flex {
+  display: flex !important;
+  flex-direction: column !important; /* Asegura que los elementos se alineen verticalmente */
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.masthead a.btn {
+  margin-top: 20px !important; /* Asegura un buen espacio entre el logo y el botón */
 }
 
 @media (min-width: 768px) {
   .masthead .masthead-logo {
-    height: 400px; /* Aumenta el tamaño del logo en pantallas medianas */
+    height: 300px !important; /* Tamaño del logo en pantallas medianas */
   }
 }
 
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
-    padding: 0;
+    padding: 0 !important;
   }
   .masthead .masthead-logo {
-    height: 500px; /* Aumenta el tamaño del logo en pantallas grandes */
-    margin-bottom: 50px; /* Aumenta el espacio entre el logo y el botón */
+    height: 400px !important; /* Aumenta el tamaño del logo en pantallas grandes */
+    margin-bottom: 50px !important; /* Aumenta el espacio entre el logo y el botón */
   }
 }
+
+
+
 
 
 
