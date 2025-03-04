@@ -8065,10 +8065,9 @@ textarea.form-control-lg {
   word-break: break-word !important;
 }
 
-/* rtl:end:remove */
-.text-primary { color: #741931 !important; } {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+/* Reemplazo de color primario sin usar !important */
+.text-primary {
+  color: #741931 !important; /* Solo si es absolutamente necesario usar !important */
 }
 
 .text-secondary {
@@ -8192,9 +8191,9 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-dark { background-color: #2d2926 !important; color: #f4eeed !important; } {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+.bg-dark {
+  background-color: #2d2926 !important; 
+  color: #f4eeed !important;
 }
 
 .bg-black {
@@ -10868,7 +10867,7 @@ body {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 6rem 0;
 }
 
 .text-white-75 {
@@ -11031,3 +11030,79 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+
+
+/* Estilo para la sección de profesionales */
+#profesionales {
+  background-color: #2d2926 !important;  /* Fondo oscuro */
+  color: #f4eeed !important;  /* Texto claro */
+}
+
+/* Asegura que las imágenes sean cuadradas y con borde borde */
+#profesionales .team-member img {
+  width: 350px;  /* Tamaño cuadrado */
+  height: 350px; /* Tamaño cuadrado */
+  object-fit: cover; /* Asegura que la imagen se recorte de forma apropiada */
+  border-radius: 1% !important; /* Bordes ligeramente redondeados */
+}
+
+/* Estilos adicionales para asegurar que todo se vea bien */
+#profesionales .team-member {
+  margin-top: 20px;
+}
+
+#profesionales .team-member img {
+  margin-bottom: 15px;
+}
+
+/* Estilo para el texto bajo los nombres */
+#profesionales .team-member h4 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Estilo para el texto "Especialista en Derecho Aeronáutico" */
+#profesionales .team-member p.text-white-75 {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75) !important; /* Color para el texto */
+}
+
+/* Estilo para el botón de LinkedIn */
+#profesionales .btn-linkedin {
+  background-color: #57101b; /* Color principal */
+  color: white;
+  padding: 10px; /* 10% más pequeño */
+  border-radius: 50%;
+  width: 45px; /* Botón un 10% más chico */
+  height: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+  transition: background-color 0.3s ease; /* Transición para el hover */
+}
+
+/* Hover sobre el botón de LinkedIn */
+#profesionales .btn-linkedin:hover {
+  background-color: #741931 !important; /* Color en hover */
+}
+
+/* Estilo para el icono de LinkedIn */
+#profesionales .linkedin-icon i {
+  font-size: 19px; /* Icono 10% más pequeño */
+  color: white; /* Color blanco para el icono */
+}
+
+/* Separación entre las columnas de los profesionales */
+#profesionales .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Asegurar separación entre las imágenes de los profesionales */
+#profesionales .col-lg-4 {
+  margin-bottom: 30px; /* Margen inferior */
+  flex: 0 0 48% !important; /* Asigna un 48% de ancho a cada columna para crear separación */
+}
+
