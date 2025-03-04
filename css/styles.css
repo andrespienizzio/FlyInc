@@ -11038,12 +11038,7 @@ body {
   background-color: transparent;
 }
 
-
-
-
-
-
-
+/* Estilo para la barra de navegación en pantallas grandes */
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
@@ -11084,12 +11079,17 @@ body {
   #mainNav.navbar-shrink .nav-link:active {
     color: #467370;
   }
+  /* Agregar borde inferior en el enlace activo */
   #mainNav.navbar-shrink .nav-link.active {
     color: #64a19d;
     outline: none;
     border-bottom: 0.25rem solid #64a19d;
   }
 }
+
+
+
+
 
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
