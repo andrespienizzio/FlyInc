@@ -12,24 +12,30 @@ window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
+        const logo = document.querySelector('.navbar-brand img'); // Seleccionamos la imagen del logo
+        
         if (!navbarCollapsible) {
             return;
         }
+        
         if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink');
+            // Cambiar el logo a Imagotipo-2 cuando no hay scroll
+            logo.src = 'assets/Imagotipo-2.png';
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('navbar-shrink');
+            // Cambiar el logo a Imagotipo-3 cuando hay scroll
+            logo.src = 'assets/Imagotipo-4.png';
         }
-
     };
 
-    // Shrink the navbar 
+    // Inicializa la función de shrink del navbar
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
+    // Aplicar el efecto de shrink al hacer scroll
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
+    // Activar Bootstrap Scrollspy en el navbar
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -38,7 +44,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // Collapse responsive navbar when toggler is visible
+    // Cerrar el navbar responsive cuando un item es clickeado
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
@@ -51,7 +57,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // Activate SimpleLightbox plugin for portfolio items
+    // Activar el plugin SimpleLightbox para los items del portfolio
     new SimpleLightbox({
         elements: '#portfolio a.portfolio-box'
     });
