@@ -10979,10 +10979,41 @@ body {
   letter-spacing: 0.0625em;
 }
 
+
+
+
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: #fff; /* Fondo blanco para la barra de navegación */
 }
+
+/* Ajuste para que el logo sea visible y adecuado en móviles */
+#mainNav .navbar-logo {
+  height: 40px; /* Tamaño predeterminado del logo */
+  max-height: 100%; /* Asegura que el logo no se haga más grande que el contenedor */
+  opacity: 0.7; /* Aplica opacidad del 70% (30% de opacidad) */
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Fondo blanco en barra de navegación para dispositivos móviles */
+@media (max-width: 991px) {
+  #mainNav {
+      background-color: #fff !important; /* Fondo blanco siempre en móviles */
+  }
+
+  #mainNav .navbar-logo {
+      height: 65px; /* Aumenta el tamaño del logo en un 15% en móviles (de 40px a 46px) */
+      opacity: 0.9; /* Menos opacidad en dispositivos móviles */
+      content: url("assets/Isotipo-8.png"); /* Logo negro siempre en móviles */
+  }
+}
+
+/* Cuando se hace scroll, el logo cambia a otro (solo para pantallas grandes) */
+.navbar-shrink .navbar-logo {
+  content: url("assets/Isotipo-8.png"); /* Cambia al logo negro cuando se hace scroll en escritorio */
+}
+
+/* Estilo para el menú */
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
@@ -11006,6 +11037,13 @@ body {
   outline: none;
   background-color: transparent;
 }
+
+
+
+
+
+
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
