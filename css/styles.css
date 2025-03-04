@@ -1313,6 +1313,8 @@ progress {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
+
+  
   .col-lg-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
@@ -11013,7 +11015,7 @@ header.masthead h1, header.masthead .h1 {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(244, 98, 58, 0.9);
+  background: rgba(116, 25, 49, 0.9);
   transition: opacity 0.25s ease;
   text-align: center;
 }
