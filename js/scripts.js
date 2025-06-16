@@ -1,3 +1,5 @@
+// Efectos de la pagina
+
 window.addEventListener("DOMContentLoaded", () => {
     // Animación de aparición de la página
     document.body.style.opacity = "0";
@@ -79,3 +81,60 @@ window.addEventListener("DOMContentLoaded", () => {
         elements: "#portfolio a.portfolio-box",
     });
 });
+
+// Formulario
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Evita el envío automático si hay errores
+
+        let isValid = true;
+
+        // Validar nombre (no debe estar vacío)
+        const name = document.getElementById("name");
+        if (name.value.trim() === "") {
+            name.classList.add("is-invalid");
+            isValid = false;
+        } else {
+            name.classList.remove("is-invalid");
+        }
+
+        // Validar correo (debe ser un email válido)
+        const email = document.getElementById("email");
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Patrón básico de email
+        if (!emailPattern.test(email.value.trim())) {
+            email.classList.add("is-invalid");
+            isValid = false;
+        } else {
+            email.classList.remove("is-invalid");
+        }
+
+        // Validar teléfono (solo debe contener números)
+        const phone = document.getElementById("phone");
+        const phonePattern = /^[0-9]+$/; // Expresión regular: solo números
+        if (!phonePattern.test(phone.value.trim())) {
+            phone.classList.add("is-invalid");
+            isValid = false;
+        } else {
+            phone.classList.remove("is-invalid");
+        }
+
+        // Validar mensaje (no debe estar vacío)
+        const message = document.getElementById("message");
+        if (message.value.trim() === "") {
+            message.classList.add("is-invalid");
+            isValid = false;
+        } else {
+            message.classList.remove("is-invalid");
+        }
+
+        // Si todo está correcto, muestra un mensaje y reinicia el formulario
+        if (isValid) {
+            alert("Formulario enviado correctamente."); // Puedes reemplazar esto con una llamada AJAX
+            form.reset(); // Limpia los campos después del envío
+        }
+    });
+});
+
