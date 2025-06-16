@@ -1283,7 +1283,7 @@ progress {
 
   .col-md-6 {
     flex: 0 0 auto;
-    width: 50%;
+    /* width: 50%; */
   }
 
   .col-md-7 {
@@ -8684,7 +8684,7 @@ fieldset:disabled .btn {
 }
 
 .mb-4 {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 2rem !important;
   margin: 0.8rem;
 }
 
@@ -12881,6 +12881,16 @@ header.masthead .h1 {
 #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption,
 #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
+}
+
+/* Estilo para la sección de about */
+#about .col-md-6 p {
+  margin-bottom: 0.5rem !important; /* Mantiene el ajuste normal */
+}
+
+/* Aumenta la distancia cuando aparece el botón */
+#about .col-lg-8 .btn-xl {
+  margin-top: 1.5rem !important; /* Incrementa la separación en un 20% */
 }
 
 
