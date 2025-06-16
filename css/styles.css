@@ -12960,6 +12960,7 @@ header.masthead .h1 {
   line-height: 1.2;
   transition: background-color 0.3s ease;
   /* Transición para el hover */
+  margin-top: 5px !important; /* Fuerza el margen superior */
 }
 
 /* Hover sobre el botón de LinkedIn */
@@ -12968,13 +12969,13 @@ header.masthead .h1 {
   /* Color en hover */
 }
 
-/* Estilo para el icono de LinkedIn */
 #profesionales .linkedin-icon i {
   font-size: 19px;
-  /* Icono 10% más pequeño */
   color: white;
-  /* Color blanco para el icono */
+  display: block;
+  margin-top: 5% !important; /* Margen superior dentro del botón */
 }
+
 
 #profesionales .row {
   display: flex;
