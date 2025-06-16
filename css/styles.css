@@ -1631,7 +1631,7 @@ progress {
 
   .g-lg-5,
   .gx-lg-5 {
-    --bs-gutter-x: 18rem;
+    --bs-gutter-x: 2rem;
   }
 
   .g-lg-5,
@@ -12960,16 +12960,13 @@ header.masthead .h1 {
   /* Color blanco para el icono */
 }
 
-/* Separación entre las columnas de los profesionales */
 #profesionales .row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centra los elementos */
+  gap: 5px; /* Reduce el espacio entre columnas */
 }
 
-/* Asegurar separación entre las imágenes de los profesionales */
 #profesionales .col-lg-4 {
-  margin-bottom: 30px;
-  /* Margen inferior */
-  flex: 0 0 48% !important;
-  /* Asigna un 48% de ancho a cada columna para crear separación */
+    flex: 0 0 45% !important; /* Ajusta el ancho de cada columna */
 }
+
