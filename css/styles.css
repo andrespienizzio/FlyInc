@@ -12913,19 +12913,35 @@ header.masthead .h1 {
   margin-bottom: 15px;
 }
 
+#profesionales .team-member ul {
+  list-style-type: disc; /* Asegura que los puntos aparezcan */
+  padding-left: 20px; /* Agrega espacio para la viñeta */
+  margin-top: 5px;
+}
+
+#profesionales .team-member ul li {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75) !important;
+  margin-bottom: 5px;
+}
+
 /* Estilo para el texto bajo los nombres */
 #profesionales .team-member h4 {
   margin-top: 10px;
+  margin-bottom: 5px;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-/* Estilo para el texto "Especialista en Derecho Aeronáutico" */
 #profesionales .team-member p.text-white-75 {
   margin-top: 5px;
+  margin-bottom: 2px;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.75) !important;
-  /* Color para el texto */
+  text-align: center; /* Centra el texto */
+  max-width: 75%; /* Limita el ancho del texto */
+  margin-left: auto; /* Ajusta margen izquierdo */
+  margin-right: auto; /* Ajusta margen derecho */
 }
 
 /* Estilo para el botón de LinkedIn */
