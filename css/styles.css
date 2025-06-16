@@ -12679,8 +12679,6 @@ hr.divider-light {
   background-color: #fff;
 }
 
-
-
 /* Estilo para el navbar */
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -12719,7 +12717,17 @@ hr.divider-light {
 #mainNav .navbar-brand img {
   height: 2.8rem;
   transition: height 0.3s ease-in-out;
-  padding-left: 1rem;
+  position: relative;
+  left: -3%; /* Mueve el logo hacia la izquierda en un 3% */
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+  .navbar-brand img {
+    content: url(/assets/Imagotipo-4.png); /* Fuerza la carga de la imagen correcta */
+    display: block !important; /* Asegura que el logo sea visible */
+    position: relative;
+    left: -3%;
+  }
 }
 
 @media (min-width: 992px) {
